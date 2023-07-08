@@ -66,27 +66,27 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(157, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.label1.Text = "ID Karyawan";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(157, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.label2.Text = "Nama Karyawan";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(157, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.label3.Text = "ID Cabang";
             // 
             // button1
             // 
@@ -94,7 +94,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 41);
             this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
+            this.button1.Text = "Open";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -103,7 +103,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 37);
             this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
+            this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -112,7 +112,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 36);
             this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
+            this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -121,7 +121,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(90, 37);
             this.button4.TabIndex = 11;
-            this.button4.Text = "button4";
+            this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Form4
