@@ -69,12 +69,40 @@ namespace UAS_PABD
 
         private void clr_Click(object sender, EventArgs e)
         {
-
+            refreshform();
         }
 
         private void sve_Click(object sender, EventArgs e)
         {
+            string idpnyw = idp.Text;
+            string nmpnyw = nmp.Text;
+            string noHp = nhp.Text;
+
+            if (nmpnyw == "")
+            {
+                MessageBox.Show("Masukkan Nama Prodi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string randomCode = GenerateRandomNonRepetitiveString(5);
+
+                string query = "INSERT INTO dbo.Prodi (id_penyewa, nama_penyewa, no_hp) VALUES (@id, @nama, @nohp)";
+                using (SqlCommand command = new SqlCommand(query, koneksi))
+                {
+                    command.Parameters.Add("@id", SqlDbType.VarChar).Value = idpnyw;
+                    command.Parameters.Add("@nama", SqlDbType.VarChar).Value = nmpnyw;
+                    command.Parameters.Add("@nohp", SqlDbType.VarChar).Value = noHp;
+                    command.ExecuteNonQuery();
+                }
+
+                koneksi.Close();
+                MessageBox.Show("Data telah ditambahkan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
 
         }
+    
     }
 }
