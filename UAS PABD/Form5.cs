@@ -20,7 +20,7 @@ namespace UAS_PABD
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select nama_prodi from dbo.karyawan";
+            string str = "select nama_kategori from dbo.kategori";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -72,7 +72,7 @@ namespace UAS_PABD
                 koneksi.Open();
 
 
-                string query = "INSERT INTO dbo.penyewa (id_kategori, nama_kategori) VALUES (@id, @nama)";
+                string query = "INSERT INTO dbo.kategori (id_kategori, nama_kategori) VALUES (@id, @nama)";
                 using (SqlCommand command = new SqlCommand(query, koneksi))
                 {
                     command.Parameters.Add("@id", SqlDbType.VarChar).Value = idkt;

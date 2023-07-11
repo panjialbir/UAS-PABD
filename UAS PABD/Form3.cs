@@ -19,7 +19,7 @@ namespace UAS_PABD
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select nama_prodi from dbo.baju";
+            string str = "select nama_baju from dbo.baju";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
