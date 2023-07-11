@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cls = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,11 +142,22 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "No.HP";
             // 
+            // cls
+            // 
+            this.cls.Location = new System.Drawing.Point(562, 322);
+            this.cls.Name = "cls";
+            this.cls.Size = new System.Drawing.Size(119, 34);
+            this.cls.TabIndex = 11;
+            this.cls.Text = "Close";
+            this.cls.UseVisualStyleBackColor = true;
+            this.cls.Click += new System.EventHandler(this.cls_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cls);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -178,5 +190,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button cls;
     }
 }

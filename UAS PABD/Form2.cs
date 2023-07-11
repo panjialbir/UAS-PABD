@@ -13,13 +13,13 @@ namespace UAS_PABD
 {
     public partial class Form2 : Form
     {
-        private string stringConnection = "data source=LAPTOP-K5VL3AER;" + "database=penyewaan_baju;Integrated Security=True;";
+        private string stringConnection = "Data Source = LAPTOP-K5VL3AER;" + "database =penyewaan_baju;User ID=sa;Password=123456";
         private SqlConnection koneksi;
 
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select nama_prodi from dbo.prodi";
+            string str = "select nama_prodi from dbo.penyewa";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -80,14 +80,14 @@ namespace UAS_PABD
 
             if (nmpnyw == "")
             {
-                MessageBox.Show("Masukkan Nama Prodi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan Nama Penyewa", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string randomCode = GenerateRandomNonRepetitiveString(5);
+                
 
-                string query = "INSERT INTO dbo.Prodi (id_penyewa, nama_penyewa, no_hp) VALUES (@id, @nama, @nohp)";
+                string query = "INSERT INTO dbo.penyewa (id_penyewa, nama_penyewa, no_hp) VALUES (@id, @nama, @nohp)";
                 using (SqlCommand command = new SqlCommand(query, koneksi))
                 {
                     command.Parameters.Add("@id", SqlDbType.VarChar).Value = idpnyw;
@@ -103,6 +103,17 @@ namespace UAS_PABD
             }
 
         }
-    
+
+        private void cls_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            // Membuka kembali Form1
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+
+            // Menutup aplikasi setelah menutup Form1 (jika diperlukan)
+            Application.Exit();
+        }
     }
 }

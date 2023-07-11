@@ -16,5 +16,12 @@ namespace UAS_PABD
         {
             InitializeComponent();
         }
+
+        private void dataPenyewaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 hu = new Form2();
+            hu.Show();
+            this.Hide();
+        }
     }
 }
