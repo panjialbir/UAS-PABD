@@ -13,7 +13,7 @@ namespace UAS_PABD
 {
     public partial class Form2 : Form
     {
-        private string stringConnection = "Data Source = LAPTOP-K5VL3AER;" + "database =penyewaan_baju;User ID=sa;Password=123456";
+        private string stringConnection = "Data Source = LAPTOP-K5VL3AER;" + "database=penyewaan_baju;User ID=sa;Password=123456";
         private SqlConnection koneksi;
 
         private void dataGridView()
@@ -41,7 +41,7 @@ namespace UAS_PABD
         }
         public Form2()
         {
-            InitializeComponent();
+            
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             refreshform();
