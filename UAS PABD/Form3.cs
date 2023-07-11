@@ -85,7 +85,7 @@ namespace UAS_PABD
                 using (SqlCommand command = new SqlCommand(query, koneksi))
                 {
                     command.Parameters.Add("@idb", SqlDbType.VarChar).Value = idbj;
-                    command.Parameters.Add("@mbj", SqlDbType.VarChar).Value = mrkb;
+                    command.Parameters.Add("@mrk", SqlDbType.VarChar).Value = mrkb;
                     command.Parameters.Add("@ukr", SqlDbType.VarChar).Value = ukrn;
                     command.Parameters.Add("@hrg", SqlDbType.VarChar).Value = hrga;
                     command.Parameters.Add("@idk", SqlDbType.VarChar).Value = idkt;
