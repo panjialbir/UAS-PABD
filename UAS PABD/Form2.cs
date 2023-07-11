@@ -19,7 +19,7 @@ namespace UAS_PABD
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select nama_prodi from dbo.penyewa";
+            string str = "select nama_penyewa from dbo.penyewa";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -85,7 +85,7 @@ namespace UAS_PABD
             else
             {
                 koneksi.Open();
-                
+                string randomCode = GenerateRandomNonRepetitiveString(5);
 
                 string query = "INSERT INTO dbo.penyewa (id_penyewa, nama_penyewa, no_hp) VALUES (@id, @nama, @nohp)";
                 using (SqlCommand command = new SqlCommand(query, koneksi))
@@ -103,7 +103,21 @@ namespace UAS_PABD
             }
 
         }
+        static string GenerateRandomNonRepetitiveString(int size)
+        {
+            Random random = new Random();
+            const string chars = "123456789abcdef";
+            char[] hexChars = new char[size];
 
+            for (int i = 0; i < size; i++)
+            {
+                hexChars[i] = chars[random.Next(chars.Length)];
+
+            }
+
+            return new string(hexChars);
+
+        }
         private void cls_Click(object sender, EventArgs e)
         {
             this.Hide();

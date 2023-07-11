@@ -78,7 +78,7 @@ namespace UAS_PABD
             else
             {
                 koneksi.Open();
-
+                string randomCode = GenerateRandomNonRepetitiveString(5);
 
                 string query = "INSERT INTO dbo.cabang (id_cabang, nama_cabang, alamat, telepon) VALUES (@id, @nama, @almt, @tlpn)";
                 using (SqlCommand command = new SqlCommand(query, koneksi))
@@ -96,7 +96,22 @@ namespace UAS_PABD
                 refreshform();
             }
         }
-    
+        static string GenerateRandomNonRepetitiveString(int size)
+        {
+            Random random = new Random();
+            const string chars = "123456789abcdef";
+            char[] hexChars = new char[size];
+
+            for (int i = 0; i < size; i++)
+            {
+                hexChars[i] = chars[random.Next(chars.Length)];
+
+            }
+
+            return new string(hexChars);
+
+        }
+
 
         private void clr_Click(object sender, EventArgs e)
         {
