@@ -79,30 +79,35 @@
             this.dataBajuToolStripMenuItem.Name = "dataBajuToolStripMenuItem";
             this.dataBajuToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataBajuToolStripMenuItem.Text = "Data Baju";
+            this.dataBajuToolStripMenuItem.Click += new System.EventHandler(this.dataBajuToolStripMenuItem_Click);
             // 
             // dataKaryawanToolStripMenuItem
             // 
             this.dataKaryawanToolStripMenuItem.Name = "dataKaryawanToolStripMenuItem";
             this.dataKaryawanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataKaryawanToolStripMenuItem.Text = "Data Karyawan";
+            this.dataKaryawanToolStripMenuItem.Click += new System.EventHandler(this.dataKaryawanToolStripMenuItem_Click);
             // 
             // dataKategoriToolStripMenuItem
             // 
             this.dataKategoriToolStripMenuItem.Name = "dataKategoriToolStripMenuItem";
             this.dataKategoriToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataKategoriToolStripMenuItem.Text = "Data Kategori";
+            this.dataKategoriToolStripMenuItem.Click += new System.EventHandler(this.dataKategoriToolStripMenuItem_Click);
             // 
             // dataCabangToolStripMenuItem
             // 
             this.dataCabangToolStripMenuItem.Name = "dataCabangToolStripMenuItem";
             this.dataCabangToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataCabangToolStripMenuItem.Text = "Data Cabang";
+            this.dataCabangToolStripMenuItem.Click += new System.EventHandler(this.dataCabangToolStripMenuItem_Click);
             // 
             // dataPenyewaanToolStripMenuItem
             // 
             this.dataPenyewaanToolStripMenuItem.Name = "dataPenyewaanToolStripMenuItem";
             this.dataPenyewaanToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataPenyewaanToolStripMenuItem.Text = "Data Penyewaan";
+            this.dataPenyewaanToolStripMenuItem.Click += new System.EventHandler(this.dataPenyewaanToolStripMenuItem_Click);
             // 
             // Form1
             // 
